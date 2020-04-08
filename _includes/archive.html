@@ -1,0 +1,23 @@
+<article>
+	Site Under Construction. Please check Later.
+	</br>
+	<ul class="archive" style="list-style-type:none;">
+    <li>
+      &nbsp; &nbsp; <a href="preface">Preface</a></font>
+    </li>
+  </ul>
+  <header><h1>{{ include.title | default: page.title }}</h1></header> <!--date: "%d/%m/%Y" -->
+  <ul class="archive" style="list-style-type:upper-roman;">
+    {% for post in site.posts %}
+    <li>
+      &nbsp; &nbsp; <a href="{{ post.url | relative_url }}">{{ post.title }}</a></font>
+    </li>
+    {% endfor %}
+  </ul>
+</article>
+
+<!-- 
+		<font face="PT Sans" "color="#808080"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></font>
+		<font face="PT Sans"><span> &#10219; &nbsp; &nbsp;</span>
+		<a href="{{ post.url | relative_url }}">{{ post.title }}</a></font>
+-->
